@@ -1,9 +1,12 @@
-import React, {  useContext, useState } from "react";
-import { StateContext } from "../Context/StateProvider";
+import React, {  useContext, useEffect, useState } from "react";
 
 const Problem1 = () => {
-  const {  todos, setTodos } = useContext(StateContext);
   const [show, setShow] = useState("all");
+  const [todos, setTodos] = useState([]);
+
+  useEffect(()=>{
+    setTodos(JSON.parse(localStorage.getItem("info")) || []);
+},[])
 
   const handleClick = (val) => {
     setShow(val);
@@ -124,7 +127,7 @@ const Problem1 = () => {
             </thead>
             <tbody>
               {content?.map((t) => (
-                <tr>
+                <tr key={t.id}>
                   <td>{t.name}</td>
                   <td>{t.status}</td>
                 </tr>

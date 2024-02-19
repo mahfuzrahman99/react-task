@@ -1,6 +1,6 @@
 
 import Modal_A from "./Modal_A";
-// import Modal_B from "./Modal_B";
+import Modal_B from "./Modal_B";
 
 const Problem2 = () => {
   return (
@@ -18,7 +18,7 @@ const Problem2 = () => {
             All Contacts
           </button>
           <Modal_A />
-          {/* <button
+          <button
             data-bs-toggle="modal"
             data-bs-target="#UsContactsModal"
             className="btn btn-lg btn-outline-warning"
@@ -26,7 +26,7 @@ const Problem2 = () => {
           >
             US Contacts
           </button>
-          <Modal_B /> */}
+          <Modal_B />
         </div>
       </div>
     </div>
